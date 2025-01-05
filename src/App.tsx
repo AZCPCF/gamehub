@@ -1,21 +1,16 @@
-import "./App.css";
-import Books from "./components/Books";
-import { useCounter } from "./store/useCounter";
+import { FC, Suspense, lazy } from "react";
+import { Routes, Route } from "react-router-dom";
 
-function App() {
-  const {count,dec,inc} = useCounter()
+const Home = lazy(() => import("./pages/Home"));
+
+const App: FC = () => {
   return (
-    <>
-    <div className="flex justify-center items-center w-full h-20">
-      <button onClick={dec}>-</button>
-      <h1 className="p-4">{count}</h1>
-      <button onClick={inc}>+</button>
-    </div>
-    <div className="flex flex-wrap m-4">
-      <Books />
-    </div>
-    </>
+    <Suspense fallback={<div>Loading...</div>}>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </Suspense>
   );
-}
+};
 
 export default App;
