@@ -1,9 +1,4 @@
 
-
-Here’s a curated list of **resources** and **example APIs** for each tool to help you learn effectively and build your projects:
-
----
-
 ### **1. TypeScript**
 - **Official Docs**: [TypeScript Documentation](https://www.typescriptlang.org/docs/)
 - **Learning Resources**:  
@@ -128,7 +123,3 @@ Here’s a curated list of **resources** and **example APIs** for each tool to h
 ### **Deployment Platforms**
 - **Netlify**: [Netlify Docs](https://www.netlify.com/)  
 - **Vercel**: [Vercel Docs](https://vercel.com/)  
-
-These will help you showcase your projects with ease!
-
-Would you like example code snippets or a GitHub repository template for any of these tools?

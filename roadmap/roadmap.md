@@ -181,4 +181,4 @@
 3. **Documentation**: Follow official documentation for tools like Redux Toolkit, Zod, GSAP, and React Query.  
 4. **Iterate and Expand**: Expand mini-projects by adding features as you learn.  
 
-Would you like additional resources or example APIs to use?
+# started from 1/8/2025
