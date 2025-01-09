@@ -1,6 +1,6 @@
 import { FC } from "react";
 // import TaskManagmentTs from "./ts-zod/task-managment-ts";
-import UserManagmentTs from "./ts-zod/user-management-ts";
+import UserManagmentTs from "./apps/ts/user-management-ts";
 
 const App: FC = () => {
   return (
