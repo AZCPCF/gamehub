@@ -1,7 +1,6 @@
 import { z } from "zod";
 
-const ENUM = ["banana", "apple", "orange"] as const; // tuple
-
+const ENUM = ["banana", "apple", "orange"] as const; // we can use as const to create enum with const key
 const fruitEnum = z.enum(ENUM /* or ['banana','apple','orange'] */); // enum
 
 type Fruit = z.infer<typeof fruitEnum>; // 'banana' | 'apple' | 'orange'
