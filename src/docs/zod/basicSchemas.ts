@@ -13,3 +13,27 @@ const nullSchema = z.null();
 console.log(stringSchema.parse("Hello World !")); // "Hello World !"
 console.log(numberSchema.parse(42)); // 42
 console.log(booleanSchema.parse(true)); // true
+
+
+
+// primitive values
+z.string();
+z.number();
+z.bigint();
+z.boolean();
+z.date();
+z.symbol();
+
+// empty types
+z.undefined();
+z.null();
+z.void(); // accepts undefined
+
+// catch-all types
+// allows any value
+z.any();
+z.unknown();
+
+// never type
+// allows no values
+z.never();
