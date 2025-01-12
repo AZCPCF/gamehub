@@ -22,5 +22,5 @@ z.bigint().negative(); // < 0n
 z.bigint().nonpositive(); // <= 0n
 
 const multipleOf = z.bigint().multipleOf(5n); // step of 5n ( x % 5n == 0 )
-console.log(multipleOf.parse(7)) // error
-console.log(multipleOf.parse(10)) // 10n
+console.log(multipleOf.parse(7)); // error
+console.log(multipleOf.parse(10)); // 10n

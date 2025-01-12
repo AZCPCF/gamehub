@@ -1,6 +1,8 @@
 import { z } from "zod";
 
-const time = z.string().time({/*precision:3*/});
+const time = z.string().time({
+	/*precision:3*/
+});
 
 time.parse("00:00:00"); // pass
 time.parse("09:52:31"); // pass

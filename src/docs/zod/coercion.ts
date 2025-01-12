@@ -1,16 +1,16 @@
 import { z } from "zod";
 
 const numSchema = z.coerce.number();
-console.log(numSchema.parse("12")) // 12
-console.log(numSchema.parse("")) // 0
-console.log(numSchema.parse(12)) // 12
-console.log(numSchema.parse("test")) // error
+console.log(numSchema.parse("12")); // 12
+console.log(numSchema.parse("")); // 0
+console.log(numSchema.parse(12)); // 12
+console.log(numSchema.parse("test")); // error
 
 const strSchema = z.coerce.string();
-console.log(strSchema.parse('test')) // "test"
-console.log(strSchema.parse(function () {})) // "function () {}"
-console.log(strSchema.parse([])) // "                "
-console.log(strSchema.parse({})) // "[object Object]"
+console.log(strSchema.parse("test")); // "test"
+console.log(strSchema.parse(() => {})); // "function () {}"
+console.log(strSchema.parse([])); // "                "
+console.log(strSchema.parse({})); // "[object Object]"
 
 // const emailSchema = z.coerce.string().email().min(5);
 

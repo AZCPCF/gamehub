@@ -1,8 +1,8 @@
 import { z } from "zod";
 
 enum Fishes {
-  Sturgeon = "caviar",
-  Salmon = "test",
+	Sturgeon = "caviar",
+	Salmon = "test",
 } // stringEnums
 
 const FishesEnum = z.nativeEnum(Fishes); // nativeEnum
@@ -17,9 +17,9 @@ console.log(FishesEnum.parse(Fishes.Salmon)); // test
 console.log(FishesEnum.parse("test")); // test
 
 enum Animals {
-  Dog,
-  Cat,
-  Rabbit,
+	Dog = 0,
+	Cat = 1,
+	Rabbit = 2,
 } // numberEnums
 
 const AnimalsEnum = z.nativeEnum(Animals); // nativeEnum
@@ -32,9 +32,9 @@ console.log(AnimalsEnum.parse(Animals.Rabbit)); // 2
 console.log(Animals[AnimalsEnum.parse(2)]); // Rabbit
 
 const Fruits = {
-  Apple: "apple",
-  Banana: "banana",
-  Cantaloupe: 3,
+	Apple: "apple",
+	Banana: "banana",
+	Cantaloupe: 3,
 } as const; // obj enum with as const
 
 const FruitEnum = z.nativeEnum(Fruits);

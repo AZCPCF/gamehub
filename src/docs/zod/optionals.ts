@@ -8,14 +8,14 @@ console.log(stringSchema.parse(undefined)); // undefined
 console.log(stringSchema.parse("test")); // "test"
 
 const userAge = z.object({ age: z.number().optional() }); // second way
-type UserAge = z.infer<typeof userAge>
+type UserAge = z.infer<typeof userAge>;
 
-const user:UserAge = {age:12};
-const user1:UserAge = {age:undefined};
-const user2:UserAge = {age:"test"};
-console.log(user2) // error
-console.log(user1) // { age : undefined }
-console.log(user) // { age : 12 }
+const user: UserAge = { age: 12 };
+const user1: UserAge = { age: undefined };
+const user2: UserAge = { age: "test" };
+console.log(user2); // error
+console.log(user1); // { age : undefined }
+console.log(user); // { age : 12 }
 
 const strSchema = z.string();
 const optionalString = strSchema.optional();

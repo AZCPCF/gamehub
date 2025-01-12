@@ -32,8 +32,8 @@ z.string().duration(); // ISO 8601 duration
 z.string().base64();
 
 const name = z.string({
-  required_error: "Name is required",
-  invalid_type_error: "Name must be a string",
+	required_error: "Name is required",
+	invalid_type_error: "Name must be a string",
 });
 
 z.string().min(5, { message: "Must be 5 or more characters long" });
