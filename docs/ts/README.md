@@ -1,4 +1,4 @@
-# docs
+# ts
 
 To install dependencies:
 
