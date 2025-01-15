@@ -1,18 +1,32 @@
 import { zodResolver } from "@hookform/resolvers/zod";
-import { FC } from "react";
+import { FC, useContext } from "react";
 import { useForm } from "react-hook-form";
 import { LoginSchema, loginSchema } from "../validations/loginSchema";
 import Control from "../components/Control";
 import { LoginProps } from "../interfaces/LoginProps";
+import { AuthContext } from "../store/AuthContext";
 
-const Login: FC<LoginProps> = ({ title="login"}) => {
+const Login: FC<LoginProps> = ({ title = "login" }) => {
+  const { login } = useContext(AuthContext);
   const {
     formState: { errors },
     control,
     handleSubmit,
   } = useForm<LoginSchema>({ resolver: zodResolver(loginSchema) });
-  const onSubmit = (data: LoginSchema) => {
-    console.log(data);
+  const onSubmit = async (data: LoginSchema) => {
+    const req = await fetch("http://localhost:3000/users");
+    if (req.ok) {
+      const res = await req.json();
+      const findUser = res.filter(
+        (item: LoginSchema) =>
+          item.username == data.username && item.password == data.password
+      );
+      if (findUser.length > 0) {
+        login();
+        alert("login");
+        console.log(findUser);
+      }
+    }
   };
 
   return (
