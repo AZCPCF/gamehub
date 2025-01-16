@@ -1,6 +1,6 @@
 import { FC } from "react";
-import TempAtomCreator from "../components/TempAtom/Creator";
-import AtomCreator from "../components/Atom/Creator";
+import TempAtomCreator from "../components/DinoCreator/TempAtom/Creator";
+import AtomCreator from "../components/DinoCreator/Atom/Creator";
 
 const Dino: FC = () => {
   return (
