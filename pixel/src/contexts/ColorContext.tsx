@@ -1,4 +1,5 @@
 import { createContext, FC, PropsWithChildren, useState } from "react";
+import { colors } from "../constants/colors";
 
 export const ColorContext = createContext({
   color: "",
@@ -7,7 +8,7 @@ export const ColorContext = createContext({
   },
 });
 export const ColorContextProvider: FC<PropsWithChildren> = ({ children }) => {
-  const [color, setColor] = useState("#ef4444");
+  const [color, setColor] = useState(colors['red']['500']);
   return (
     <ColorContext.Provider value={{ color, setColor }}>
       {children}
