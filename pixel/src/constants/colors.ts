@@ -1,4 +1,11 @@
-export const colors = {
+type ColorShades = {
+  [key: string]: string;
+};
+
+type ColorsType = {
+  [colorName: string]: ColorShades;
+};
+export const colors: ColorsType = {
   rose: {
     "50": "#fff1f2",
     "100": "#ffe4e6",
