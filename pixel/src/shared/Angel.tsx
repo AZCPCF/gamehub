@@ -110,3 +110,4 @@ const Angel:FC = () =>{
         </div>
       );
 }
+export default Angel
