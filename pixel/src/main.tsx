@@ -2,12 +2,12 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.tsx";
-import { ColorContextProvider } from "./contexts/ColorContext.tsx";
+import { GameProvider } from "./contexts/GameContext.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <ColorContextProvider>
+    <GameProvider>
       <App />
-    </ColorContextProvider>
+    </GameProvider>
   </StrictMode>
 );
