@@ -10,6 +10,14 @@ const Queries: FC = () => {
     // status
   } = useQuery({
     queryKey: ["posts"],
+    // placeholderData:[{title:'test'}],
+    // initialData:[{title:'hello world'}],
+    // staleTime:2000,
+    // refetchOnWindowFocus:true,
+    // refetchOnMount:'always'|true,
+    // refetchInterval:4000,
+    // retry:4,
+    // retryDelay:3000,
     queryFn: async () => {
       const res = await fetch("https://jsonplaceholder.typicode.com/posts");
       if (res.ok) {
