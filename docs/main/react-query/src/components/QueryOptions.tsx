@@ -6,6 +6,7 @@ const QueryOptions: FC = () => {
     queryOptions({
       queryKey: ["todos", id],
       // placeholderData:{title:'test'},
+      initialData: { title: "test", completed: true },
       queryFn: async () => {
         const res = await fetch(
           `https://jsonplaceholder.typicode.com/todos/${id}`
@@ -17,9 +18,9 @@ const QueryOptions: FC = () => {
     });
   const { data: todos, status, error } = useQuery(todosOption(4));
 
-  if (status == "pending") {
-    return "pending...";
-  }
+  // if (status == "pending") {
+  //   return "pending...";
+  // }
   if (status == "error") {
     return error?.message;
   }
